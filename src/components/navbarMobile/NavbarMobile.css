@@ -13,16 +13,6 @@
         margin: 0;
     }
 
-    /* .menu {
-        background: #1A2E47;
-        position: absolute;
-        margin: 0;
-        width: 100%;
-        top: -800px;
-        left: 0;
-        height: 860px;
-    } */
-
     .menu.open {
         top: 0;
     }
@@ -35,8 +25,6 @@
         z-index: 15;
         margin-top: 25px;
         margin-left: 25px;
-        /* transform: scale(.7); */
-        /* cursor: pointer; */
       }
 
     .menu_btn {

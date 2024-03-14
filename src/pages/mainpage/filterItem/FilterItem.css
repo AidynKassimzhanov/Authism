@@ -1,0 +1,23 @@
+.filterItem {
+    width: 300px;
+    height: 333px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.filterItem:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 391px) {
+    .filterItem {
+        width: 140px;
+        height: 151px;
+    }
+
+    .filterItem img {
+        width: 140px;
+        height: 120px;
+    }
+}

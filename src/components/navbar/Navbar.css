@@ -38,6 +38,17 @@
     cursor: pointer;
   }
 
+  @media (max-width: 1432px) {
+    .navbar {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .menu {
+      width: 180px;
+    }
+  }
+
   @media (max-width: 391px) {
     .navbar {
         display: none;
