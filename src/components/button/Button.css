@@ -1,0 +1,38 @@
+.btn {
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    line-height: 30px;
+    font-weight: 700;
+    /* border: 2px solid #fff; */
+  }
+
+
+/* .btn:nth-child(1) {
+    border: 2px solid #1A2E47;
+} */
+
+  .blue {
+    background: #1A2E47;
+    color: #FFF;
+  }
+
+  .white {
+    background: #FFF;
+    color: #1A2E47; 
+  }
+
+  .btn:hover {
+    /* border: 2px solid black; */
+    font-size: 18.5px;
+    transition: all .1s ease-in-out;
+  }
+
+
+
+
+
