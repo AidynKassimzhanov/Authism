@@ -8,10 +8,10 @@ import { ForumBlock } from './forumBlock/ForumBlock'
 export const MainPage = () => {
   return (
     <div>
-        <Header />
+
         <FilterBlock />
         <ForumBlock />
-        <Footer />
+
     </div>
   )
 }

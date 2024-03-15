@@ -1,0 +1,123 @@
+.loginPage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer {
+    display: flex;
+    width: 1352px;
+    height: 982px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.loginImage img {
+    width: 692px;
+    height: 982px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin-top: 50px;
+}
+
+.login img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.login img:hover {
+    transform: scale(1.1);
+}
+
+.login h2 {
+    margin-top: 150px; 
+    font-size: 48px;
+}
+
+.loginForm {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.loginForm input {
+    height: 80px;
+    width: 570px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-size: 24px;
+    padding: 5px 20px;
+}
+
+.loginForm button {
+    height: 80px;
+    width: 349px;
+    border-radius: 10px;
+    background: #1A2E47;
+    color: #FFF;
+    font-size: 24px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginForm button:hover {
+    color: #1A2E47;
+    background: #FFF;
+}
+
+@media (max-width: 391px) {
+    .loginPage {
+        align-items: start;
+        height: ;
+    }
+
+    .login {
+        margin-top: 30px;
+    }
+
+    .loginImage img {
+        display: none;
+    }
+
+    .loginContainer {
+        width: 330px;
+        gap: 0;
+    }
+
+    .loginForm {
+        margin-top: 50px;
+    }
+
+    .login h2 {
+        margin-top: 80px;
+        font-size: 36px;
+    }
+
+    .loginForm p {
+        font-size: 16px;
+    } 
+
+    .loginForm input {
+        width: 290px;
+        height: 61px;
+        margin: 30px 0;
+        font-size: 16px;
+    }
+
+    .loginForm button {
+        width: 330px;
+        height: 61px;
+        margin: 10px 0;
+    }
+}

@@ -1,9 +1,15 @@
-import { MainPage } from "./pages/mainpage/MainPage";
+import { AppRouter } from "./components/AppRouter";
+
+import { BrowserRouter } from "react-router-dom";
+
 
 function App() {
-  return (
+
+return (
     <div className="App">
-      <MainPage />
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
     </div>
   );
 }
