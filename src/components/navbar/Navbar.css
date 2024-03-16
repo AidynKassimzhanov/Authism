@@ -11,23 +11,32 @@
     font-size: 1.1rem;
   }
 
- .menu {
+.navbar .menu {
     width: 250px;
     display: flex;
     justify-content: space-between;
   }
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar li{
+  width: 90px;
+}
   
 .navbar a {
     display: block;
     text-decoration: none;
     color: #1E1E1E;
-    transition: all 0.1s ease;
+    transition: transform 0.1s ease-in-out;
+    
   }
   
 .navbar a:hover{
     color: #000;
-    /* transform: scale(1.05); */
-    font-size: 1.15rem;
+    transform: scale(1.05);
   } 
   
 .logo {

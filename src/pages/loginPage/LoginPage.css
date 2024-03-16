@@ -9,14 +9,14 @@
 .loginContainer {
     display: flex;
     width: 1352px;
-    height: 982px;
+    height: 100%;
     margin: 0 auto;
     gap: 50px;
 }
 
 .loginImage img {
     width: 692px;
-    height: 982px;
+    height: 100%;
 }
 
 .login {

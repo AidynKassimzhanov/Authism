@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import './NavbarMobile.css'
 import { FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE } from '../../consts'
 
-export const NavbarMobile = () => {
+export const NavbarMobile = (props) => {
 
     const [isAuth, setIsAuth] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
 
   return (
-    // <div className={"navbarMobile" + (isOpen ? " openBurger" : "")}>
-    <div className="navbarMobile">
+    <div className={`navbarMobile ${props.className}`}>
+    {/* <div className="navbarMobile"> */}
         <div className="logo"></div>
 
 

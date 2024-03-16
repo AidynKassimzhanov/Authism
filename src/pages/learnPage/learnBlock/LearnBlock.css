@@ -1,0 +1,11 @@
+.learnBlock {
+    margin-top: 50px;
+    width: 98%;
+    margin: 50px auto;
+}
+
+@media (max-width: 391px) {
+    .learnBlock h2 {
+        font-size: 30px;
+    }
+}

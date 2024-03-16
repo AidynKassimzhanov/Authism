@@ -39,7 +39,7 @@
         z-index: 15;
     }
 
-    h1 {
+    .menu h1 {
         font-size: 44px;
     }
 
@@ -61,18 +61,18 @@
         transition: top 0.3s ease-in-out;
     }
 
-    ul {
+    .menu ul {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
 
-    ul li {
+    .menu ul li {
         list-style: none;
         text-align: center;
     }
 
-    li a {
+    .menu li a {
         text-decoration: none;
         color: #798A9E;
         font-size: 36px;

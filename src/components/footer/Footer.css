@@ -4,7 +4,7 @@
     background: #373535;
     display: flex;
     align-items: center;
-    color: #9B9A9A;
+    color: #9B9A9A !important;
     font-size: 24px;
 }
 
@@ -24,7 +24,7 @@
     height: 173px;
 }
 
-ul {
+.footer ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,13 +33,13 @@ ul {
     
 }
 
-li a {
+.footer li a {
     color: #9B9A9A;
     font-size: 24px;
     transition: color 0.2s ease-in-out;
 }
 
-li a:hover {
+.footer li a:hover {
     color: #FFF;
     /* font-weight: 600; */
     /* transition: font-weight 0.3s ease; */
@@ -53,7 +53,7 @@ li a:hover {
 }
 
 .social_icon {
-    color: #BABABA;
+    color: #BABABA !important;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -89,7 +89,7 @@ li a:hover {
       gap: 30px;
     }
 
-    ul {
+    .footer ul {
         gap: 20px;
     }
   }

@@ -14,20 +14,24 @@ export const AppRouter = () => {
     const location = useLocation();
 
     // Проверяем, нужно ли показывать заголовок и нижний колонтитул
-    const shouldShowHeaderFooter = () => {
+    const shouldShowHeader = () => {
+        return ![LOGIN_ROUTE, LEARN_ROUTE].includes(location.pathname);
+    };
+
+    const shouldShowFooter = () => {
         return location.pathname !== LOGIN_ROUTE; // Если текущий маршрут не совпадает с LOGIN_ROUTE, то показываем заголовок и нижний колонтитул
     };
 
     return (
         <div>
-            {shouldShowHeaderFooter() && <Header />}
+            {shouldShowHeader() && <Header />}
             <Routes>
                 <Route path={HOME_ROUTE} element={ <MainPage /> } exact/>
                 <Route path={LOGIN_ROUTE} element={ <LoginPage /> } exact/>
                 <Route path={LEARN_ROUTE} element={ <LearnPage /> } exact/>
                 <Route path={FORUM_ROUTE} element={ <ForumPage /> } exact/>
             </Routes>
-            {shouldShowHeaderFooter() && <Footer />}
+            {shouldShowFooter() && <Footer />}
         </div>
     )
   }

@@ -1,0 +1,63 @@
+.filter {
+    font-size: 24px;
+}
+
+.filter h3 {
+    margin-top: 50px;
+}
+
+.filterInput {
+    margin-top: 30px;
+    position: relative; /* Устанавливаем позицию родительского контейнера */
+    width: 363px; 
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.filterInput select {
+    border: 1px solid #8e8e8e;
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    color: #8e8e8e;
+    padding: 10px 20px;
+    font-size: 20px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.filterInput option {
+    color: #8e8e8e;
+    margin: 10px 20px;
+    font-size: 20px;
+    height: 60px;
+}
+
+select::-ms-expand {
+    display: none;
+  }
+
+select:not([multiple]) {
+    padding-right: 1.em;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1em) 1em;
+    background-size: 0.85em auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cpath d='M70.3 13.8L40 66.3 9.7 13.8z' fill='%23000'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.arrows {
+    display: flex;
+}
+
+.filterInput img {
+    cursor: pointer;
+}
+
+@media (max-width: 391px) {
+    .filter h3 {
+        font-size: 26px;
+    }
+}
+  
+
