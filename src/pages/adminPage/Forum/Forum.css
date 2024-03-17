@@ -1,0 +1,55 @@
+.adminForum {
+    margin-top: 30px;
+}
+
+.adminforumItem {
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.adminforumItem.head {
+    font-weight: 600;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.adminforumItem p {
+    margin-bottom: 0 ;
+}
+
+.forumId {
+    width: 50px;
+}
+
+.forumTitle {
+    width: 250px;
+}
+
+.forumDescription {
+    width: 450px;
+}
+
+.forumCreateDate {
+    width: 150px;
+}
+
+.adminButtonGroups {
+    display: flex;
+}
+
+.adminforumItem input {
+    width: 100px;
+    background: #1A2E47;
+    margin-right: 25px;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.adminforumItem input:hover {
+    background: #FFF;
+    color: #1A2E47;
+}

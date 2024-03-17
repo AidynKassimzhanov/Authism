@@ -1,0 +1,51 @@
+.adminSideBar {
+    width: 250px; /* Ширина боковой панели */
+    min-height: 100vh; /* Минимальная высота боковой панели, чтобы занимать всю высоту экрана */
+    background-color: #192E47; /* Цвет фона боковой панели */
+    color: #fff; /* Цвет текста */
+    position: fixed; /* Фиксированное позиционирование, чтобы панель оставалась видимой при прокрутке */
+    top: 0; /* Панель прижимается к верху экрана */
+    left: 0; /* Панель прижимается к левому краю экрана */
+    bottom: 0; /* Панель вытягивается до нижнего края экрана */
+    overflow-y: auto; /* Добавляем вертикальную прокрутку, если содержимое больше, чем высота боковой панели */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.accordion {
+    background: #192E47 !important;
+    font-size: 20px !important;
+}
+
+.adminSideBar ul {
+    margin-top: 50px;
+    padding-left: 0;
+}
+
+.adminSideBar li {
+    padding-bottom: 15px;
+    font-size: 20px;
+    color: #fff;
+    width: 150px;
+}
+
+.adminSideBar a {
+    color: #fff;
+    font-weight: 400;
+    transition: font-weight 0.3s ease-in-out;
+}
+
+.adminSideBar a:hover {
+    font-weight: 600;
+    /* transform: scale(1.1); */
+}
+
+.adminSideBar .active {
+    color: #5c3bdd;
+}
+
+.logo2 {
+    margin-top: 50px;
+}

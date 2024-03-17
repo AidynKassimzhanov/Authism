@@ -30,6 +30,7 @@ export const Footer = () => {
             <div className="phone_number">
                 <p>+1 (702) 910 - 9163</p>
             </div>
+            
             <div className="up_button" onClick={scrollToTop}/>
         </div>
     </div>

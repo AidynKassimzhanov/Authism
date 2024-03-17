@@ -14,7 +14,7 @@
     }
 
     .menu.open {
-        top: 0;
+        top: 0 !important;
     }
 
     .logo {
@@ -36,7 +36,7 @@
         margin-right: 25px;
         background-repeat: no-repeat;
         background-position: center;
-        z-index: 15;
+        z-index: 1000;
     }
 
     .menu h1 {

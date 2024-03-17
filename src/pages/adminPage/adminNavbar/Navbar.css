@@ -1,5 +1,5 @@
-.navbar {
-    width: 1252px;
+.adminNavbar {
+    width: 90%;
     height: 100px;
     background: #FFF;
     border-radius: 25px;
@@ -14,23 +14,22 @@
     /* position: fixed; */
   }
 
-.navbar .menu {
-    /* width: 250px; */
+.adminNavbar .menu {
+    width: 250px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
-.navbar ul {
+.adminNavbar ul {
   display: flex;
   gap: 30px;
 }
 
-.navbar li{
+.adminNavbar li{
   width: 90px;
 }
   
-.navbar a {
+.adminNavbar a {
     display: block;
     text-decoration: none;
     color: #1E1E1E;
@@ -38,18 +37,18 @@
     
   }
   
-.navbar a:hover{
+.adminNavbar a:hover{
     color: #000;
     transform: scale(1.05);
   } 
   
-.logo {
+/* .logo {
     background-image: url('../../img/logo.svg');
     width: 70px;
     height: 88px;
     transform: scale(.7);
     cursor: pointer;
-  }
+  } */
 
 .adminCaption {
   background: #192E47;
@@ -59,26 +58,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 2px;
 }
 
   @media (max-width: 1432px) {
-    .navbar {
+    .adminNavbar {
       width: 80%;
       margin: 0 auto;
     }
 
-    .menu {
+    .adminNavbar.menu {
       width: 180px;
     }
   }
 
   @media (max-width: 391px) {
-    .navbar {
+    .adminNavbar {
         display: none;
     }
 
-    .menu {
+    .adminNavbar.menu {
         display: none;
     }
   }

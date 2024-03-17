@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import './NavbarMobile.css'
-import { FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE } from '../../consts'
+import { ADMIN_ROUTE, FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE } from '../../consts'
+import { useDispatch, useSelector } from 'react-redux';
 
 export const NavbarMobile = (props) => {
 
-    const [isAuth, setIsAuth] = useState(false)
+    const {isAuth, isAdmin} = useSelector(state => state.main)
     const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -18,6 +19,7 @@ export const NavbarMobile = (props) => {
                     <li><a href={HOME_ROUTE}>Home</a></li>
                     <li><a href={FORUM_ROUTE}>Forum</a></li>
                     <li><a href={LEARN_ROUTE}>Learn</a></li>
+                    <li> { isAdmin && <a href={ADMIN_ROUTE}>Admin</a> } </li>
                     <li>{ isAuth 
                         ? <a href="#">Profile</a>
                         : <a href={LOGIN_ROUTE}>Authorization</a>
