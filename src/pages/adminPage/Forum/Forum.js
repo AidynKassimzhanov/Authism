@@ -1,15 +1,13 @@
 import React from 'react'
 import './Forum.css'
 import { AdminForumItem } from './ForumItem'
+import { useSelector } from 'react-redux'
+
+
 
 export const Forum = () => {
 
-    const item = {
-        id: 1,
-        title: 'dfsdf',
-        description: 'dfgfdgdfgdfgdf',
-        create: 'dsfdfs'
-    }
+    const {forums} = useSelector(state => state.forum)
 
     const itemCaption = {
         id: 'id',
@@ -19,12 +17,15 @@ export const Forum = () => {
     }
 
   return (
-    <div className='adminForum'>
+    <div className='adminForum' id="modal-root">
         <h2>All Forums</h2>
 
         <div className="forumHead">
             <AdminForumItem className={'head'} item={itemCaption}/>
-            <AdminForumItem item={item}/>
+            {forums.map(item => 
+                <AdminForumItem key={item.id} item={item}/>
+            )}
+            
         </div>
     </div>
   )

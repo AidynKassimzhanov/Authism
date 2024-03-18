@@ -13,11 +13,13 @@ export const AdminPage = () => {
         <div className='adminPage'>
 
                 <AdminSideBar />
-                <div className="adminContent">
-                    <AdminNavbar />
-                    
-                    <div className="wrapper">
-                        <AdminRoutes />
+                <div className="wrapper">
+                    <div className="adminContent" id="modal-root">
+                        <AdminNavbar />
+                        
+                        <div className="wrapper">
+                            <AdminRoutes />
+                        </div>
                     </div>
                 </div>
 

@@ -13,7 +13,7 @@
 }
 
 .wrapper {
-  width: 90%;
+  max-width: 1432px;
   margin: 0 auto;
 }
 
@@ -27,6 +27,32 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.adminInput {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.captionAdmin {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.adminButton {
+  border-radius: 5px;
+  background: #192E47;
+  color: white;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adminButton:hover {
+  background: #FFF;
+  color: #192E47;
+  border: 1px solid #192E47;
 }
 
 @media (max-width: 1432px) {

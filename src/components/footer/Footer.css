@@ -16,6 +16,7 @@
 .footer .wrapper {
     display: flex;
     justify-content: space-between;
+    width: 1432px;
 }
 
 .footer_logo {

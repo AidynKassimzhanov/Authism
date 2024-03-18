@@ -2,6 +2,15 @@
     margin-top: 30px;
 }
 
+.forumHead {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.adminForum h2 {
+    margin-bottom: 30px;
+}
+
 .adminforumItem {
     display: flex;
     padding: 10px 30px;
@@ -37,19 +46,59 @@
 
 .adminButtonGroups {
     display: flex;
+    gap: 25px;
 }
 
-.adminforumItem input {
+.adminforumItem input, 
+.modal-overlay button {
     width: 100px;
     background: #1A2E47;
-    margin-right: 25px;
     color: #FFF;
     border-radius: 5px;
     padding: 5px 10px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .adminforumItem input:hover {
     background: #FFF;
     color: #1A2E47;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+ .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay p {
+    margin-bottom: 20px;
+}
+
+.modalBtnGroups {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-overlay button {
+    width: 150px;
+}
+
+.createForumBtn {
+    margin-top: 20px;
+    width: 500px;
+    padding: 10px;
 }

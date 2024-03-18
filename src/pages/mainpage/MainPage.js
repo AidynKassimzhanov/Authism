@@ -9,8 +9,10 @@ export const MainPage = () => {
   return (
     <div>
 
-        <FilterBlock />
-        <ForumBlock />
+        <div className="wrapper">
+          <FilterBlock />
+          <ForumBlock />
+        </div>
 
     </div>
   )
