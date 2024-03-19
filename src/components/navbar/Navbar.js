@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 export const Navbar = (props) => {
 
   const navigate = useNavigate()
-  const {isAuth, isAdmin} = useSelector(state => state.main)
+  const {isAuth, isAdmin} = useSelector(state => state.main) || {}
 
   return (
     <div className={`navbar ${props.className}`}>

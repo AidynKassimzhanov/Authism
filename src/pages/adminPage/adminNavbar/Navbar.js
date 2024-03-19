@@ -7,7 +7,8 @@ import { ADMIN_ROUTE, FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE } from '
 export const AdminNavbar = (props) => {
 
   const navigate = useNavigate()
-  const {isAuth, isAdmin} = useSelector(state => state.main)
+  const {isAuth} = useSelector(state => state.main)
+  const {isAdmin} = useSelector(state => state.main) || {}
 
   return (
     <div className={`adminNavbar ${props.className}`}>

@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export const NavbarMobile = (props) => {
 
-    const {isAuth, isAdmin} = useSelector(state => state.main)
+    const {isAuth} = useSelector(state => state.main)
+    const {isAdmin} = useSelector(state => state.main) || {}
     const [isOpen, setIsOpen] = useState(false)
 
   return (
