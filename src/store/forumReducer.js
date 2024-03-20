@@ -49,8 +49,11 @@ const slice = createSlice({
         },
         editForum: (state, action) => {
             const { id, title, description } = action.payload;
+            console.log(id);
             const forumToEdit = state.forums.find(forum => forum.id === id);
+            console.log(forumToEdit);
             if (forumToEdit) {
+
                 forumToEdit.title = title;
                 forumToEdit.description = description;
             }

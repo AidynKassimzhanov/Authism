@@ -46,7 +46,7 @@ export const AppRouter = () => {
                     <Route path={FORUM_ROUTE} element={ <ForumPage /> } exact/>
                     <Route path="/api" element={ <QueryComponent /> } exact/>
                     {/* <Route path={ADMIN_ROUTE} element={ <ProtectedRoute element={<AdminPage />} isAdmin={isAdmin} />} /> */}
-                    <Route path="/admin*" element={ <AdminPage /> } />
+                    <Route path="/admin/*" element={ <AdminPage /> } />
                     {/* <ProtectedRoute
                         path={ADMIN_ROUTE}
                         element={<AdminPage />}

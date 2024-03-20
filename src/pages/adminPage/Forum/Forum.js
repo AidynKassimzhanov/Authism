@@ -17,7 +17,7 @@ export const Forum = () => {
     }
 
   return (
-    <div className='adminForum' id="modal-root">
+    <div className='adminForum' >
         <h2>All Forums</h2>
 
         <div className="forumHead">

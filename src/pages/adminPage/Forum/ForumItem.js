@@ -67,6 +67,7 @@ export const AdminForumItem = (props) => {
                     <input 
                         type='button' 
                         value='Edit'
+                        onClick={() => navigate('/admin/forum/edit', { state: { data: props.item }} )}
                     /> 
                     <input 
                         type='button' 

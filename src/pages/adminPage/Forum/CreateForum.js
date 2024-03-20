@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux'
 import { addForum } from '../../../store/forumReducer'
 import { useNavigate } from 'react-router-dom'
 
-export const CreateForum = () => {
+export const CreateForum = (props) => {
 
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState(props.title) || ''
   const [image, setImage] = useState('')
   const [description, setDescription] = useState('')
   const dispatch = useDispatch()
