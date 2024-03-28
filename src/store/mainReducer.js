@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    isAuth: true,
-    isAdmin: true,
+    isAuth: false,
+    isAdmin: false,
 }
 
 const slice = createSlice({
@@ -12,11 +12,15 @@ const slice = createSlice({
         setIsAuth: (state, action) => {
             state.isAuth = action.payload
         },
+        setIsAdmin: (state, action) => {
+            state.isAdmin = action.payload
+        },
     }
 })
 
 export const {
     setIsAuth,
+    setIsAdmin
 } = slice.actions;
   
 export default slice.reducer;
