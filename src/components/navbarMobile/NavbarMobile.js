@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './NavbarMobile.css'
 import { ADMIN_ROUTE, FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE } from '../../consts'
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 export const NavbarMobile = (props) => {
 
@@ -17,13 +18,13 @@ export const NavbarMobile = (props) => {
 
             <div className={`menu ${isOpen ? 'open' : ''}`} >
                 <ul>
-                    <li><a href={HOME_ROUTE}>Home</a></li>
-                    <li><a href={FORUM_ROUTE}>Forum</a></li>
-                    <li><a href={LEARN_ROUTE}>Learn</a></li>
+                    <li><Link to={HOME_ROUTE}>Home</Link></li>
+                    <li><Link to={FORUM_ROUTE}>Forum</Link></li>
+                    <li><Link to={LEARN_ROUTE}>Learn</Link></li>
                     <li> { isAdmin && <a href={ADMIN_ROUTE}>Admin</a> } </li>
                     <li>{ isAuth 
-                        ? <a href="#">Profile</a>
-                        : <a href={LOGIN_ROUTE}>Authorization</a>
+                        ? <Link to="#">Profile</Link>
+                        : <Link to={LOGIN_ROUTE}>Authorization</Link>
                     }</li>
                 </ul>
                 <p className="number">+1(702) 910 - 9163</p>

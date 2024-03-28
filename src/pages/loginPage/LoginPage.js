@@ -38,11 +38,10 @@ export const LoginPage = () => {
   });
   // const{data, isLoading, error} = useQuery('signin', fetchLogin)
 
-  const handleCreateSubmit = (event) => {
+  const handleLoginSubmit = (event) => {
     event.preventDefault();
     loginMutation.mutate(formData);
     // console.log(loginMutation);
-    
   };
 
   return (
@@ -74,7 +73,7 @@ export const LoginPage = () => {
             />
 
             <button 
-              onClick={handleCreateSubmit}
+              onClick={handleLoginSubmit}
             >
               Authorization
             </button>

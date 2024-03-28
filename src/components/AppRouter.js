@@ -8,10 +8,8 @@ import { Header } from "./header/Header"
 import { Footer } from "./footer/Footer"
 import { AdminPage } from "../pages/adminPage/AdminPage"
 import { useSelector } from "react-redux"
-import { AdminSideBar } from "../pages/adminPage/adminSideBar/AdminSideBar"
-import { Forum } from "../pages/adminPage/Forum/Forum"
-import { AdminRoutes } from "../pages/adminPage/AdminRouter"
-import { QueryComponent } from "../pages/queryComponent"
+
+
 
 const ProtectedRoute = ({ element, isAdmin, ...rest }) => {
     return isAdmin && element;
@@ -44,9 +42,8 @@ export const AppRouter = () => {
                     <Route path={LOGIN_ROUTE} element={ <LoginPage /> } exact/>
                     <Route path={LEARN_ROUTE} element={ <LearnPage /> } exact/>
                     <Route path={FORUM_ROUTE} element={ <ForumPage /> } exact/>
-                    <Route path="/api" element={ <QueryComponent /> } exact/>
-                    {/* <Route path={ADMIN_ROUTE} element={ <ProtectedRoute element={<AdminPage />} isAdmin={isAdmin} />} /> */}
-                    <Route path="/admin/*" element={ <AdminPage /> } />
+                    <Route path='/admin/*' element={ <AdminPage /> } />
+                    {/* <Route path={ADMIN_ROUTE} element={ <AdminPage /> } /> */}
                     {/* <ProtectedRoute
                         path={ADMIN_ROUTE}
                         element={<AdminPage />}
