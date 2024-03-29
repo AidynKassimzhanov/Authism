@@ -3,7 +3,7 @@ import './LoginPage.css'
 import { useNavigate } from 'react-router-dom'
 import { HOME_ROUTE } from '../../consts'
 import { useQuery, useMutation } from 'react-query';
-import { fetchLogin } from '../../http/userAPI';
+import { fetchLogin } from '../../http/authAPI';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setIsAdmin, setIsAuth } from '../../store/mainReducer';

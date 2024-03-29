@@ -1,13 +1,16 @@
 import {$authHost, $host} from './index'
 
-export const fetchLogin = async (formData) => {
-    const {data} = await $host.post('/signin', formData)
-    localStorage.setItem('token', data.token)
+export const fetchUserAll = async () => {
+    const {data} = await $authHost.get('/users')
     return data
 }
 
-export const fetchLogout = async () => {
-    const {data} = await $authHost.get('/signout')
-    localStorage.removeItem('token');
+export const fetchUser = async (id) => {
+    const {data} = await $authHost.get(`/users/${id}`)
+    return data
+}
+
+export const fetchDeleteUser = async (id) => {
+    const {data} = await $authHost.get(`/users/delete/${id}`)
     return data
 }

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { MdLogout } from "react-icons/md";
 import { setIsAdmin, setIsAuth } from '../../store/mainReducer';
 import { useMutation } from 'react-query';
-import { fetchLogout } from '../../http/userAPI';
+import { fetchLogout } from '../../http/authAPI';
 
 export const Navbar = (props) => {
 
@@ -42,7 +42,7 @@ export const Navbar = (props) => {
             <li><Link to={HOME_ROUTE}>Home</Link></li>
             <li><Link to={FORUM_ROUTE}>Forum</Link></li>
             <li><Link to={LEARN_ROUTE}>Learn</Link></li>
-            <li> {isAdmin && <Link to={ADMIN_ROUTE}>Admin2</Link>} </li>
+            <li> {isAdmin && <Link to={ADMIN_ROUTE}>Admin</Link>} </li>
           </ul>
             
         </div>

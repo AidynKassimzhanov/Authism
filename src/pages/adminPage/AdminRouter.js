@@ -14,11 +14,14 @@ export const AdminRoutes = () => {
         <Route path="/forum" element={ <Forum /> } />
         <Route path="/forum/create" element={ <CreateForum /> } />
         <Route path="/forum/edit" element={ <EditForum /> } />
+        
+        <Route path="/users" element={ <Users /> } />
+        <Route path="/forum/blank" element={ <Users /> } />
 
         <Route path="/learn" element={ <Learn /> } />
         <Route path="/forum/blank" element={ <Learn /> } />
-        <Route path="/users" element={ <Users /> } />
-        <Route path="/forum/blank" element={ <Users /> } />
+
+
     </Routes>
   )
 }
