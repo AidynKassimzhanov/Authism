@@ -1,9 +1,20 @@
 .adminContent {
     margin-left: 250px;
     height: 100%;
+    margin-top: 25px;
+
 }
 
 .navbar {
     /* border: 1px solid #ccc; */
     /* margin-top: 50px; */
+}
+
+.adminPage .wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.adminPage  h2{
+    margin-bottom: 30px;
 }

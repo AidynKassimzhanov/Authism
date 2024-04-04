@@ -13,6 +13,29 @@ export const Users = () => {
       <h2>All Users</h2>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
+
+      <div className='adminforumItem head'>
+        <p className='forumId'> id </p>
+        <p className='forumTitle'> Username </p>
+        <p className='forumTitle'> User Role </p>
+
+        <div className='adminButtonGroups'>
+          <input 
+            type='button' 
+            value='Create' 
+            // onClick={() => navigate('/admin/forum/create' )}
+          /> 
+          <input 
+            type='button' 
+            value='Delete All'
+            // onClick={() => {
+            //     setIsModalOpen(true)
+            //     setDeleteMode('all')
+            // }}
+          />    
+        </div>
+      </div>
+
       {data && (
           data.users.map(user => (
             <UserItem item={user}/>
