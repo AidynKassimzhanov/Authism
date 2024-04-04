@@ -27,7 +27,7 @@ export const CreateForum = (props) => {
         break;
       default:
         break;
-    }
+    } 
   }
 
   const handleClick = () => {

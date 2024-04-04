@@ -18,3 +18,31 @@
 .adminPage  h2{
     margin-bottom: 30px;
 }
+
+.adminBlank form {
+    /* display: flex; */
+}
+
+.adminBlank input {
+    /* width: 100px; */
+    background: #FFF;
+    color: #1A2E47;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: block;
+    margin: 10px 0;
+}
+
+.adminBlank button {
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.adminBlank button:hover {
+    background: #1A2E47;
+    color: #FFF;
+}

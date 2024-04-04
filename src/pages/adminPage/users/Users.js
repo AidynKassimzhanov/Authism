@@ -3,10 +3,12 @@ import '../Forum/Forum.css'
 import { useQuery } from 'react-query'
 import { fetchUser, fetchUserAll } from '../../../http/userAPI'
 import { UserItem } from './UserItem'
+import { useNavigate } from 'react-router-dom'
 
 export const Users = () => {
 
   const {data, isLoading, error} = useQuery('users', fetchUserAll)
+  const navigate = useNavigate()
 
   return (
     <div className='adminUsers'>
@@ -23,7 +25,7 @@ export const Users = () => {
           <input 
             type='button' 
             value='Create' 
-            // onClick={() => navigate('/admin/forum/create' )}
+            onClick={() => navigate('/admin/users/create' )}
           /> 
           <input 
             type='button' 
@@ -38,7 +40,7 @@ export const Users = () => {
 
       {data && (
           data.users.map(user => (
-            <UserItem item={user}/>
+            <UserItem item={user} key={user.id}/>
           ))
       )}
 

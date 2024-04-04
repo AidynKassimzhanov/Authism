@@ -5,6 +5,8 @@ import { Learn } from './Learn/Learn'
 import { Users } from './users/Users'
 import { CreateForum } from './Forum/CreateForum'
 import { EditForum } from './Forum/EditForum'
+import UserBlank from './users/UserBlank'
+// import { UserBlank } from './users/UserBlank'
 
 export const AdminRoutes = () => {
   return (
@@ -16,7 +18,8 @@ export const AdminRoutes = () => {
         <Route path="/forum/edit" element={ <EditForum /> } />
         
         <Route path="/users" element={ <Users /> } />
-        <Route path="/forum/blank" element={ <Users /> } />
+        <Route path="/users/edit" element={ <UserBlank /> } />
+        <Route path="/users/create" element={ <UserBlank /> } />
 
         <Route path="/learn" element={ <Learn /> } />
         <Route path="/forum/blank" element={ <Learn /> } />

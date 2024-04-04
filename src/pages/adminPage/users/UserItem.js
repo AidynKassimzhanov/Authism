@@ -13,7 +13,7 @@ export const UserItem = (props) => {
             <input 
                 type='button' 
                 value='Edit'
-                // onClick={() => navigate('/admin/forum/edit', { state: { data: props.item }} )}
+                onClick={() => navigate('/admin/users/edit', { state: { data: props.item }} )}
             /> 
             <input 
                 type='button' 
