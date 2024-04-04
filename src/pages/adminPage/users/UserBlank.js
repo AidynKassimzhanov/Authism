@@ -8,6 +8,7 @@ import { fetchUserCreate, fetchUserUpdate } from '../../../http/userAPI';
 const UserBlank = () => {
     
     const [userData, setUserData] = useState({
+        id: '',
         first_name: '',
         last_name: '',
         login: '',
@@ -64,9 +65,10 @@ const UserBlank = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (create) {
-            userCreateMutation.mutate()
+            userCreateMutation.mutate(userData)
         } else {
-            userUpdateMutation.mutate(data.id)
+            console.log(userData);
+            userUpdateMutation.mutate(data.id, userData)
         }
         
         // Отправляем измененные данные на сервер
@@ -93,15 +95,21 @@ const UserBlank = () => {
                 <input type="password" name="password" value={userData.password} onChange={handleChange} />
 
                 <label>Birthday:</label>
-                <input type="date" name="birthday" value={userData.birthday} onChange={handleChange} />
-
-                <label>Avatar URL:</label>
-                <input type="text" name="avatar_url" value={userData.avatar_url} onChange={handleChange} />
+                <input type="date" name="birthday" value="2017-06-01" pattern="\d{4}-\d{2}-\d{2}" value={userData.birthday} onChange={handleChange} />
 
                 <label>Phone Number:</label>
-                <input type="tel" name="phone_number" value={userData.phone_number} onChange={handleChange} />
+                <input 
+                    type="tel" 
+                    name="phone_number" 
+                    value={userData.phone_number} 
+                    onChange={handleChange} 
+                />
 
-                {/* <label>Is Active:</label>
+                
+                {/*<label>Avatar URL:</label>
+                <input type="text" name="avatar_url" value={userData.avatar_url} onChange={handleChange} />
+
+                <label>Is Active:</label>
                 <input type="checkbox" name="is_active" checked={userData.is_active} onChange={handleChange} />
 
                 <label>Status:</label>
