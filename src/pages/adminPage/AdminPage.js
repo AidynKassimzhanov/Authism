@@ -15,7 +15,7 @@ export const AdminPage = () => {
                 <AdminSideBar />
                 <div className="wrapper">
                     <div className="adminContent" id="modal-root">
-                        <AdminNavbar />
+                        {/* <AdminNavbar /> */}
                         
                         <div className="wrapper">
                             <AdminRoutes />

@@ -9,9 +9,9 @@ import { NavbarMobile } from '../../components/navbarMobile/NavbarMobile'
 export const LearnPage = () => {
   return (
     <div className='learnPage'>
-      <NavbarMobile className='learnNavbarMobile' />
+      {/* <NavbarMobile className='learnNavbarMobile' /> */}
       <div className="wrapper">
-        <Navbar className='learnNavbar'/>
+        {/* <Navbar className='learnNavbar'/> */}
         
         <Filter />
         <LearnBlock />

@@ -2,40 +2,23 @@ import React, { useState } from 'react'
 import './LoginPage.css'
 import { useNavigate } from 'react-router-dom'
 import { HOME_ROUTE } from '../../consts'
-import { useQuery, useMutation } from 'react-query';
-import { fetchLogin } from '../../http/authAPI';
-import { useDispatch, useSelector } from 'react-redux';
 
-import { setIsAdmin, setIsAuth } from '../../store/mainReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { useAuthMutations } from '../../queries/Auth';
+
 
 export const LoginPage = () => {
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
-
-  const { isAuth } = useSelector(state => state.main) 
+  const {loginMutation} = useAuthMutations();
 
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
 
-  const loginMutation = useMutation(fetchLogin, {
-    onSuccess: (data) => {
-      // Выполняем действия после успешной авторизации
-      dispatch(setIsAuth(true))
-      if (data.user.Role.name === 'admin') {
-        dispatch(setIsAdmin(true))
-      }
-      console.log('Successful login:', data);
-      navigate(HOME_ROUTE); // Перенаправляем на домашнюю страницу
-    },
-    onError: (error) => {
-      // Обработка ошибок авторизации
-      console.error('Login error:', error);
-      // Можно добавить сообщение об ошибке для пользователя
-    }
-  });
+  
   // const{data, isLoading, error} = useQuery('signin', fetchLogin)
 
   const handleLoginSubmit = (event) => {

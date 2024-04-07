@@ -1,18 +1,40 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { ADMIN_ROUTE, FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE } from '../../consts'
+import { ADMIN_ROUTE, FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE, PROFILE_ROUTE } from '../../consts'
 import { useDispatch, useSelector } from 'react-redux';
 import { MdLogout } from "react-icons/md";
 import { setIsAdmin, setIsAuth } from '../../store/mainReducer';
 import { useMutation } from 'react-query';
 import { fetchLogout } from '../../http/authAPI';
+import { clearUser, setUser } from "../../store/mainReducer";
+import { useUserMutations } from '../../queries/User';
+import { fetchUser } from '../../http/userAPI';
+
 
 export const Navbar = (props) => {
 
   const { isAuth, isAdmin } = useSelector(state => state.main) 
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const { userGetQuery } = useUserMutations()
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    
+    const {data} = userGetQuery.refetch(user.id)
+    // console.log(data);
+    
+    
+    // console.log('user', user);
+
+    token && user 
+        ? dispatch(setUser(user)) 
+        : dispatch(clearUser());
+  }, []);
+
 
   const logoutMutation = useMutation(fetchLogout, {
     onSuccess: (data) => {
@@ -51,7 +73,7 @@ export const Navbar = (props) => {
         { isAuth 
           ? <div className='profile_block'>
               <div className='profile'> 
-                <Link to="#">Profile</Link> 
+                <Link to={PROFILE_ROUTE}>Profile</Link> 
                 {isAdmin && <div className='adminCaption'>Admin</div>} 
               </div>
               <MdLogout className='logout' onClick={handleLogout}/>

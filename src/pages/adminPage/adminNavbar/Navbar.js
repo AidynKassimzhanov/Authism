@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import { ADMIN_ROUTE, FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE } from '../../../consts';
+import { ADMIN_ROUTE, FORUM_ROUTE, HOME_ROUTE, LEARN_ROUTE, LOGIN_ROUTE, PROFILE_ROUTE } from '../../../consts';
 
 export const AdminNavbar = (props) => {
 
@@ -26,7 +26,7 @@ export const AdminNavbar = (props) => {
         
 
         { isAuth 
-          ? <div className='profile'> <Link to="#">Profile</Link> {isAdmin && <div className='adminCaption'>Admin</div>} </div>
+          ? <div className='profile'> <Link to={PROFILE_ROUTE}>Profile</Link> {isAdmin && <div className='adminCaption'>Admin</div>} </div>
           : <Link to={LOGIN_ROUTE}>Authorization</Link>
         }
         

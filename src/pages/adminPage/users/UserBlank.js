@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../AdminPage.css'
-import { useMutation } from 'react-query';
-import { fetchUserCreate, fetchUserUpdate } from '../../../http/userAPI';
+import { useUserMutations } from '../../../queries/User';
+
 // import axios from 'axios'; // Предполагается, что вы используете axios для взаимодействия с сервером
 
 const UserBlank = () => {
@@ -27,6 +27,7 @@ const UserBlank = () => {
     const location = useLocation();
     let data = location.state?.data;
     const navigate = useNavigate()
+    const { userCreateMutation, userUpdateAdminMutation} = useUserMutations();
 
     useEffect(() => {
         if (data) {
@@ -37,22 +38,6 @@ const UserBlank = () => {
             setCreate(false)
         }
     }, []);
-
-    const userUpdateMutation = useMutation(fetchUserUpdate, {
-        onSuccess: (data) => {
-          console.log('Successful update User:', data);
-          navigate("/admin/users"); // Перенаправляем на домашнюю страницу
-        },
-        onError: (error) => console.error('Login error:', error)
-    });
-
-    const userCreateMutation = useMutation(fetchUserCreate, {
-        onSuccess: (data) => {
-          console.log('Successful create User:', data);
-          navigate("/admin/users"); // Перенаправляем на домашнюю страницу
-        },
-        onError: (error) => console.error('Login error:', error)
-    });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -68,10 +53,10 @@ const UserBlank = () => {
             userCreateMutation.mutate(userData)
         } else {
             console.log(userData);
-            userUpdateMutation.mutate(data.id, userData)
+            userUpdateAdminMutation.mutate({id: data.id, userData})
         }
         
-        // Отправляем измененные данные на сервер
+       
         
     };
 

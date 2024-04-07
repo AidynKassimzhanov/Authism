@@ -15,9 +15,14 @@ export const fetchDeleteUser = async (id) => {
     return data
 }
 
-export const fetchUserUpdate = async (id, userData) => {
+export const fetchUserUpdateAdmin = async ({id, userData}) => {
     const {data} = await $authHost.put(`/users/update/admin/${id}`, userData)
-    console.log(userData);
+    return data
+}
+
+
+export const fetchUserUpdate = async (userData) => {
+    const {data} = await $authHost.put(`/users/update`, userData)
     return data
 }
 
